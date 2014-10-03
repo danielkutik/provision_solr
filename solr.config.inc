@@ -20,7 +20,7 @@
  * This class will publish the config files to remote
  * servers automatically.
  */
-class provisionConfig_solr extends provisionConfig {
+class Provision_Config_solr extends Provision_Config {
   function write() {
     parent::write();
     $filename = $this->filename();
@@ -43,7 +43,7 @@ class provisionConfig_solr extends provisionConfig {
  * automatically generate a symlink to the correct file for each
  * server.
  */
-class provisionConfig_solr_server extends provisionConfig_solr {
+class Provision_Config_solr_server extends Provision_Config_solr {
   public $template = '';
   public $description = 'Link to app localhost folder.';
   
@@ -84,7 +84,7 @@ class provisionConfig_solr_server extends provisionConfig_solr {
 /**
  * Base class for virtual host configuration files.
  */
-class provisionConfig_solr_site extends provisionConfig_solr {
+class Provision_Config_solr_site extends Provision_Config_solr {
   
   // @TODO: REMOVE HACK!  For some reason, provisionConfig_tomcat_site isn't used.
   public $template = 'site.tpl.php';

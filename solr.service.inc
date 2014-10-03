@@ -3,7 +3,7 @@
 // Ripped off from http.drush.inc
 
 // Base solr service class. 
-class provisionService_solr extends provisionService {
+class Provision_Service_solr extends Provision_Service {
   public $service = 'solr';
 
   function verify_server_cmd() {
@@ -43,7 +43,7 @@ class provisionService_solr extends provisionService {
 }
 
 // Public solr service , as in non-encrypted and listening on a port.
-class provisionService_solr_public extends provisionService_solr {
+class Provision_Service_solr_public extends Provision_Service_solr {
   protected $has_port = TRUE;
 
   // The implementation chooses the port.   
