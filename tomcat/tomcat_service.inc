@@ -18,14 +18,14 @@
  * values that are passed to it, and also to override the portions of
  * the public API for this service that are necessary.
  */
-class provisionService_solr_tomcat extends provisionService_solr_public {
+class Provision_Service_solr_tomcat extends Provision_Service_solr_public {
   protected $application_name = 'tomcat';
   protected $has_restart_cmd = TRUE;
 
   protected $has_port = TRUE;
 
   function default_restart_cmd() {
-    return provisionService_solr_tomcat::tomcat_restart_cmd();
+    return Provision_Service_solr_tomcat::tomcat_restart_cmd();
   }
   
   function default_port() {
@@ -72,7 +72,7 @@ class provisionService_solr_tomcat extends provisionService_solr_public {
 /**
  * Apache server level configuration file class
  */
-class provisionConfig_tomcat_server extends provisionConfig_solr_server {
+class Provision_Config_tomcat_server extends Provision_Config_solr_server {
   protected $mode = 0755;
 
   function process() {
@@ -90,7 +90,7 @@ class provisionConfig_tomcat_server extends provisionConfig_solr_server {
 /** 
  * Apache site level config class. Virtual host.
  */
-class provisionConfig_tomcat_site extends provisionConfig_solr_site {
+class Provision_Config_tomcat_site extends Provision_Config_solr_site {
   function process() {
     parent::process();
   }
