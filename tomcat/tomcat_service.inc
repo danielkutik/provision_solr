@@ -33,8 +33,8 @@ class Provision_Service_solr_tomcat extends Provision_Service_solr_public {
   }
 
   function init_server() {
-    $this->configs['server'][] = 'provisionConfig_tomcat_server';
-    $this->configs['site'][] = 'provisionConfig_tomcat_site';
+    $this->configs['server'][] = 'Provision_Config_tomcat_server';
+    $this->configs['site'][] = 'Provision_Config_tomcat_site';
     parent::init_server();
   }
 
